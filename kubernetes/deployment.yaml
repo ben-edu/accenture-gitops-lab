@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: interview-app
+  namespace: interview-lab
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: interview-app
+  template:
+    metadata:
+      labels:
+        app: interview-app
+    spec:
+      containers:
+        - name: interview-app
+          image: traefik/whoami:v1.10.3
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 2
+            periodSeconds: 5
