@@ -4,7 +4,7 @@ metadata:
   name: interview-app
   namespace: interview-lab
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: interview-app
