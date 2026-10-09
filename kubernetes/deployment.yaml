@@ -13,6 +13,8 @@ spec:
       labels:
         app: interview-app
     spec:
+      imagePullSecrets:
+        - name: harbor-pull-secret
       containers:
         - name: interview-app
           image: harbor.proxbenovh.cloud/devops-project-harbor/accenture-interview-app:2f0406abee7a9f1d81220a6920556c78a7904cb7
