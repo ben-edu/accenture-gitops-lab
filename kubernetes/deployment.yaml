@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: interview-app
-          image: traefik/whoami:v1.10.3
+          image: traefik/whoami:v99.99.99-does-not-exist
           ports:
             - containerPort: 80
           readinessProbe:
