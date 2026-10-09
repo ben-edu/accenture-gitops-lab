@@ -15,12 +15,12 @@ spec:
     spec:
       containers:
         - name: interview-app
-          image: traefik/whoami:v1.10.3
+          image: harbor.proxbenovh.cloud/devops-project-harbor/accenture-interview-app:2f0406abee7a9f1d81220a6920556c78a7904cb7
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           readinessProbe:
             httpGet:
-              path: /
-              port: 80
-            initialDelaySeconds: 2
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 5
             periodSeconds: 5
