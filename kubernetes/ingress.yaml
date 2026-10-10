@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: interview-app
+  name: spring-api
   namespace: interview-lab
 spec:
   ingressClassName: traefik
   rules:
-    - host: interview-app.local
+    - host: spring-api.soria-ai.fr
       http:
         paths:
           - path: /
