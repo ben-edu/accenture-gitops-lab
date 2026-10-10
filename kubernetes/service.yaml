@@ -5,7 +5,7 @@ metadata:
   namespace: interview-lab
 spec:
   selector:
-    app: interview-app-broken
+    app: interview-app
   ports:
     - port: 80
       targetPort: 8080
